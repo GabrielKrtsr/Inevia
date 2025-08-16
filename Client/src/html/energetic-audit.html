@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilan Énergétique - Inevia</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header sticky">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="images/logo-inevia.jpg" alt="Inevia Transport Express">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/services">Nos services</a></li>
+                    <li><a href="/about">À propos</a></li>
+                    <li><a href="/energetic-audit">Bilan énergétique</a></li>
+                    <li><a href="/contact" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Bilan énergétique de vos transports</h1>
+            <p>Évaluez l'impact environnemental de votre logistique et découvrez comment l'optimiser</p>
+        </div>
+    </section>
+
+    <!-- Audit Intro -->
+    <section class="section audit-intro-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Outil en cours de développement</h2>
+                <p>Nous préparons actuellement un outil innovant pour vous aider à mesurer et réduire l'empreinte carbone de vos transports. Cet outil vous permettra d'évaluer vos émissions et de découvrir des solutions plus écologiques.</p>
+                <p>Inscrivez-vous ci-dessous pour être informé de son lancement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audit Form -->
+    <section class="section audit-form-section bg-light">
+        <div class="container">
+            <div class="form-container">
+                <h2>Commencer le Bilan</h2>
+                <form id="audit-form">
+                    <div class="form-group">
+                        <label for="transport-type">Type de transport</label>
+                        <select id="transport-type" name="transport-type" required>
+                            <option value="">Sélectionnez...</option>
+                            <option value="express">Transport express</option>
+                            <option value="dedie">Transport dédié</option>
+                            <option value="groupage">Groupage</option>
+                            <option value="frigorifique">Frigorifique</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="distance">Nombre de kilomètres</label>
+                        <input type="number" id="distance" name="distance" placeholder="Ex: 500" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="volume">Volume estimé (m³)</label>
+                        <input type="number" id="volume" name="volume" placeholder="Ex: 12" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Poids estimé (kg)</label>
+                        <input type="number" id="weight" name="weight" placeholder="Ex: 800" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mode de calcul</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="mode" value="standard" checked> Standard</label>
+                            <label><input type="radio" name="mode" value="detail"> Détail avancé</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Calculer le Bilan</button>
+                </form>
+                <div class="form-notice">
+                    <p><i class="fas fa-info-circle"></i> Cet outil est actuellement en développement. Le formulaire n'est pas encore fonctionnel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="../images/logo-inevia.png" alt="Inevia" class="footer-logo">
+                    <p>Votre partenaire économique</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> contact@inevia.com</p>
+                    <p><i class="fas fa-phone"></i> +33 6 28 47 31 51</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 39 rue du Hem, 59320  Sequedin</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="/legal">Mentions légales</a></li>
+                        <li><a href="/services">Nos services</a></li>
+                        <li><a href="/about">À propos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Réseaux sociaux</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Inevia. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

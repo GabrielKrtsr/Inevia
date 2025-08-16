@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Inevia</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header sticky">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="images/logo-inevia.jpg" alt="Inevia Transport Express">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/services">Nos services</a></li>
+                    <li><a href="/about">À propos</a></li>
+                    <li><a href="/energetic-audit">Bilan énergétique</a></li>
+                    <li><a href="/contact" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Une question, un devis ou une demande spécifique ? Notre équipe est à votre écoute.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h2>Envoyez-nous un message</h2>
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstname">Prénom</label>
+                                <input type="text" id="firstname" name="firstname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname">Nom</label>
+                                <input type="text" id="lastname" name="lastname" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Objet</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez...</option>
+                                <option value="quote">Demande de devis</option>
+                                <option value="question">Question</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="g-recaptcha" data-sitekey=6Lck2ZQrAAAAAKK0qzlX9QiKzhNnqfJfLwe992VE style="padding-bottom: 10px ;"></div>
+                        <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h2>Coordonnées</h2>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contact@inevia.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p>+33 6 28 47 31 51</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Adresse</h3>
+                            <p>39 rue du Hem<br> 59320  Sequedin, France</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horaires</h3>
+                            <p>Lundi-Vendredi: 8h-19h<br>Samedi: 9h-13h</p>
+                        </div>
+                    </div>
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5061.505285037129!2d2.9825155776234755!3d50.63171177162732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd2aa4b9104079%3A0x37d651a6b5ab041e!2s39%20Rue%20du%20Hem%2C%2059320%20Sequedin!5e0!3m2!1sfr!2sfr!4v1754833391038!5m2!1sfr!2sfr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" ></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="../images/logo-inevia.png" alt="Inevia" class="footer-logo">
+                    <p>Votre partenaire économique</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> contact@inevia.com</p>
+                    <p><i class="fas fa-phone"></i> +33 6 28 47 31 51</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 39 rue du Hem, 59320  Sequedin</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="/legal">Mentions légales</a></li>
+                        <li><a href="/services">Nos services</a></li>
+                        <li><a href="/about">À propos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Réseaux sociaux</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Inevia. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
