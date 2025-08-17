@@ -70,6 +70,7 @@ ul {
 }
 
 .section {
+    background-color: var(--gray);
     padding: 5rem 0;
 }
 
@@ -139,16 +140,18 @@ ul {
 
 .btn-primary:hover {
     background-color: var(--secondary-color);
+    color: var(--white);
     transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     color: var(--white);
 }
 
 .btn-secondary:hover {
-    background-color: #3182ce;
+    background-color: var(--primary-color);
+    color: var(--white);
     transform: translateY(-2px);
 }
 
@@ -208,7 +211,21 @@ ul {
     height: 80px;
 }
 
+.header li a.active::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        var(--secondary-color) 0%,
+        var(--secondary-color) 8%,  
+        var(--primary-color) 60%,    
+        var(--primary-color) 100%
+    );
 
+    margin-top:1px ;
+}
 
 .logo img {
     height: 50px;
@@ -243,6 +260,9 @@ ul {
 .navbar a.active {
     color: var(--primary-color);
 }
+.navbar a.btn-outline.active:hover{
+    color: var(--white);
+}
 
 .mobile-menu-btn {
     display: none;
@@ -261,133 +281,6 @@ ul {
   align-items: center;
 }
 
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.png') no-repeat center center/cover;
-    height: 100vh;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: var(--white);
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--white);
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2.5rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-/* Grille des solutions */
-.solutions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-/* Carte */
-.solution-card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* Effet hover */
-.solution-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* Image */
-.solution-card img.card-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-/* Titre */
-.solution-card h3 {
-  font-size: 1.4rem;
-  margin: 20px 0 10px;
-  color: #333;
-}
-
-/* Texte */
-.solution-card p {
-  font-size: 1rem;
-  color: #666;
-  padding: 0 15px;
-  margin-bottom: 20px;
-}
-
-
-
-/* Section garanties */
-.section.guarantees {
-  padding: 60px 20px;
-
-  color: var(--primary-color);
-  text-align: center;
-}
-
-.section.guarantees .section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-
-/* Ligne d’icônes */
-.guarantees-line {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
-}
-
-/* Élément de garantie */
-.guarantee-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 200px;
-}
-
-.guarantee-item img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
-
-}
-
-.guarantee-item p {
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.4;
-}
-
-
 /* About Section */
 .about-section {
     background-color: var(--white);
@@ -400,10 +293,7 @@ ul {
     align-items: center;
 }
 
-.about-image img {
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
+
 
 /* Benefits Section */
 .benefits-grid {
@@ -452,11 +342,12 @@ ul {
 
 /* Page Header */
 .page-header {
-    background-color: var(--primary-color);
+    background : url('../images/page-header.png') no-repeat center center/cover;
     color: var(--white);
     padding: 6rem 0 4rem;
     text-align: center;
-    margin-top: 80px;
+    height: 320px;
+    
 }
 
 .page-header h1 {
@@ -535,13 +426,20 @@ ul {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
-
+.value-text {
+    color: var(--primary-color);
+}
+.value-text:hover {
+filter: invert(41%) sepia(46%) saturate(4995%) hue-rotate(349deg) brightness(92%) contrast(98%)
+}
 .value-icon {
     font-size: 2.5rem;
-    color: var(--accent-color);
+    color: var(--primary-color);
     margin-bottom: 1.5rem;
 }
-
+.value-icon:hover {
+filter: invert(41%) sepia(46%) saturate(4995%) hue-rotate(349deg) brightness(92%) contrast(98%)
+}
 /* Europe Map */
 .europe-map {
     position: relative;
@@ -580,83 +478,7 @@ ul {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: var(--dark-color);
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--gray);
-    border-radius: 4px;
-    font-family: 'Roboto', sans-serif;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent-color);
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-}
-
-.radio-group {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.radio-group label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: normal;
-    cursor: pointer;
-}
-
-.contact-info {
-    background-color: var(--light-color);
-    padding: 2rem;
-    border-radius: 8px;
-}
-
-.info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.info-item i {
-    font-size: 1.5rem;
-    color: var(--accent-color);
-    margin-top: 0.25rem;
-}
-
-.info-item h3 {
-    margin-bottom: 0.25rem;
-    font-size: 1.1rem;
-}
-
-.contact-map {
-    margin-top: 2rem;
-    border-radius: 8px;
-    overflow: hidden;
-}
 
 /* Legal Section */
 .legal-content {
@@ -783,6 +605,8 @@ ul {
     }
     
     .navbar.active {
+        margin-top: 30px;
+        background-color: var(--gray);
         left: 0;
     }
     

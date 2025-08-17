@@ -1,0 +1,168 @@
+/* Contact Section */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-form {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-checkbox {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap; /* si trop long, ça passe à la ligne */
+}
+
+.form-group label , .form-checkbox p {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.contact-info {
+    background-color: var(--light-color);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 0.25rem;
+}
+
+.info-item i:hover {
+filter: invert(41%) sepia(46%) saturate(4995%) hue-rotate(349deg) brightness(92%) contrast(98%)
+}
+.info-item h3 {
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.contact-map {
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Bilan energetique */
+.form-step {
+  display: none;
+}
+.form-step.active {
+  display: block;
+}
+/* Conteneur */
+.progress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Ligne de fond */
+.progress::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: var(--text-light);
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+/* Barre de progression colorée */
+.progress-bar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: var(--primary-color);
+  transform: translateY(-50%);
+  transition: width 0.3s ease-in-out;
+  z-index: 2;
+  border-radius: 5px;
+}
+
+/* Étapes numérotées */
+.progress-step {
+  width: 30px;
+  height: 30px;
+  background: var(--text-light);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+}
+
+.progress-step.active {
+  background: var(--primary-color);
+}
+ @media(max-width: 768px){
+    .section.audit-form-section {
+        margin-top: 40px;
+    }
+ }

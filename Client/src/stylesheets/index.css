@@ -1,0 +1,127 @@
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.png') no-repeat center center/cover;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Grille des solutions */
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Carte */
+.solution-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Effet hover */
+.solution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.solution-card img.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Titre */
+.solution-card h3 {
+  font-size: 1.4rem;
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+/* Texte */
+.solution-card p {
+  font-size: 1rem;
+  color: #666;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+
+
+/* Section garanties */
+.section.guarantees {
+  padding: 60px 20px;
+
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.section.guarantees .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Ligne d’icônes */
+.guarantees-line {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Élément de garantie */
+.guarantee-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+.guarantee-item :hover {
+filter: invert(41%) sepia(46%) saturate(4995%) hue-rotate(349deg) brightness(92%) contrast(98%)
+}
+.guarantee-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+
+}
+
+.guarantee-item p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}

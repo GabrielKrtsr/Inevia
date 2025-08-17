@@ -46,54 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-// Sélection de tous les formulaires
-document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', async function (e) {
-        e.preventDefault();
 
-        if (this.id === 'contact-form') {
-            // === Formulaire de contact avec reCAPTCHA et API ===
-            const firstname = document.getElementById('firstname').value;
-            const lastname = document.getElementById('lastname').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            const token = grecaptcha.getResponse();
-            if (!token) {
-                alert("Veuillez valider le reCAPTCHA.");
-                return;
-            }
-
-            try {
-                const response = await fetch('/api/contact/send', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ firstname,lastname, email, subject, message, token })
-                });
-
-                const data = await response.json();
-                alert(data.message);
-                if (response.ok) {
-                    this.reset();
-                    grecaptcha.reset();
-                }
-            } catch (error) {
-                alert("Erreur lors de l'envoi. Veuillez réessayer.");
-                console.error(error);
-            }
-
-        } else if (this.id === 'audit-form') {
-            // === Formulaire d'audit simple ===
-            alert('Le bilan énergétique est en cours de développement. Nous vous informerons dès son lancement.');
-            this.reset();
-        } else {
-            // === Autres formulaires ===
-            alert('Formulaire envoyé.');
-            this.reset();
-        }
-    });
-});
 
     
     // Sticky header on scroll
@@ -133,7 +86,7 @@ document.querySelectorAll('form').forEach(form => {
         window.addEventListener("scroll", adjustHeader);
         window.addEventListener("resize", adjustHeader); // au cas où la top-bar change de taille
 
-        
+
     // Active link highlighting based on current page
     const currentPage = location.pathname.split('/').pop();
     const navLinksBis = document.querySelectorAll('.navbar a');

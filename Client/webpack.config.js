@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     script: path.resolve(__dirname, './src/javascripts/script.js'),
+    contact: path.resolve(__dirname, './src/javascripts/contact.js'),
   },
   mode: 'production',
   devtool: 'eval-source-map',
@@ -34,12 +35,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "src/html/contact.html",
       filename: "html/contact.html",
-      chunks: ['script']
+      chunks: ['script','contact']
     }),
         new HtmlWebpackPlugin({
       template: "src/html/energetic-audit.html",
       filename: "html/energetic-audit.html",
-      chunks: ['script']
+      chunks: ['script','contact']
     }),
     new HtmlWebpackPlugin({
       template: "src/html/services.html",
