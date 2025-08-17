@@ -161,15 +161,22 @@ filter: invert(41%) sepia(46%) saturate(4995%) hue-rotate(349deg) brightness(92%
 .progress-step.active {
   background: var(--primary-color);
 }
- @media(max-width: 768px){
-    .section.audit-form-section {
-        margin-top: 40px;
-    }
- }
+
 
 @media (max-width: 768px) {
   .contact-grid {
     display: flex;
     flex-direction: column; 
   }
+      .section.audit-form-section {
+        margin-top: 40px;
+    }
+
+}
+@media (max-width: 576px) {
+
+
+  .info-item i:hover {
+filter: none
+}
 }

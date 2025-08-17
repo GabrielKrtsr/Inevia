@@ -125,3 +125,10 @@ filter: invert(41%) sepia(46%) saturate(4995%) hue-rotate(349deg) brightness(92%
   font-weight: 500;
   line-height: 1.4;
 }
+@media (max-width: 576px) {
+
+
+ .guarantee-item :hover {
+filter: none
+}
+}
