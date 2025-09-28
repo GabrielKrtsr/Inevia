@@ -37,6 +37,11 @@ module.exports = {
       filename: "html/contact.html",
       chunks: ['script','contact']
     }),
+    new HtmlWebpackPlugin({
+      template: "src/html/cookie.html",
+      filename: "html/cookie.html",
+      chunks: ['script','cookie']
+    }),
         new HtmlWebpackPlugin({
       template: "src/html/energetic-audit.html",
       filename: "html/energetic-audit.html",
