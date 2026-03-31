@@ -9,7 +9,6 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var aboutRouter = require('./routes/about');
-var cookieRouter = require('./routes/cookie');
 var contactRouter = require('./routes/contact');
 var legalRouter = require('./routes/legal');
 var servicesRouter = require('./routes/services');
@@ -46,7 +45,6 @@ app.use('/contact', contactRouter)
 app.use('/energetic-audit', AuditRouter);
 app.use('/legal',legalRouter);
 app.use('/services', servicesRouter)
-app.use('/cookie', cookieRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
